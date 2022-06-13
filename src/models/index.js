@@ -5,12 +5,12 @@ const { DB_NAME, DB_USER, DB_PASSWORD, DB_HOST, DB_PORT} = process.env;
 
 const setUpDatabase = () => {
     const connection = new Sequelize( DB_NAME, DB_USER, DB_PASSWORD, {
-        host:DB_HOST,
+        host: DB_HOST,
         port: DB_PORT,
         dialect: "mysql",
         logging: false
     })
-    // gives sequelize permission to alter our tables to fit the models that we are going to create
+    // gives sequelize permission to alter our tables to fit the models that we are going to create, in this case Reader
     connection.sync({alter: true})
     return {}
 }
