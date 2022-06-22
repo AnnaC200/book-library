@@ -1,8 +1,8 @@
 const { expect } = require('chai')
 const request = require('supertest')
 const { Reader } = require('../src/models')
-const app = require('../app')
-// const { DataTypes } = require('sequelize/types');
+const app = require('../src/app')
+
 
 describe('/readers', () => {
 // func to run once before ALL the test in describe
